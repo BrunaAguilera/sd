@@ -1,0 +1,146 @@
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background:#FFF7F1;
+  color:#5A2A27;
+}
+
+.hero{
+  background:#690E05;
+  color:white;
+  padding:50px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero p{
+  color:#F7B267;
+  font-size:1.2rem;
+}
+
+.chef{
+  position:relative;
+}
+
+.chef img{
+  width:180px;
+  border-radius:20px;
+}
+
+.speech{
+  position:absolute;
+  top:-10px;
+  right:-20px;
+  background:white;
+  color:#690E05;
+  padding:10px 15px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+  background:#F7B267;
+}
+
+nav a{
+  text-decoration:none;
+  color:#690E05;
+  font-weight:bold;
+}
+
+.card{
+  margin:40px auto;
+  width:85%;
+  background:white;
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cookie-shape{
+  border:5px dotted #D95D39;
+}
+
+.brownie-shape{
+  border:5px solid #5A2A27;
+}
+
+.pie-shape{
+  border:5px dashed #F4845F;
+}
+
+.box-shape{
+  border:5px double #690E05;
+}
+
+details{
+  margin-top:20px;
+}
+
+summary{
+  cursor:pointer;
+  font-size:1.1rem;
+  font-weight:bold;
+  color:#690E05;
+}
+
+.item{
+  background:#FFF7F1;
+  margin:10px 0;
+  padding:12px;
+  border-radius:12px;
+}
+
+.image-item img{
+  width:120px;
+  border-radius:12px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.combo{
+  background:#F7B267;
+  padding:20px;
+  margin:10px 0;
+  border-radius:15px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.bottom-section{
+  background:#690E05;
+  color:white;
+  padding:50px 10%;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:30px;
+}
+
+@media(max-width:768px){
+
+  .hero{
+    text-align:center;
+  }
+
+  nav{
+    flex-wrap:wrap;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
