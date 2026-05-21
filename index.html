@@ -1,273 +1,29 @@
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Sweet Delight</title>
 
-  <style>
-    :root{
-      --cream:#fdf0d5;
-      --peach:#f4b393;
-      --orange:#ee964b;
-      --coral:#f95738;
-      --dark:#690E05;
-      --white:#ffffff;
-      --soft:#fff8f3;
-      --shadow:0 8px 20px rgba(0,0,0,0.08);
-      --radius:24px;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family: "Poppins", sans-serif;
-      background:var(--cream);
-      color:var(--dark);
-      overflow-x:hidden;
-    }
-
-    h1,h2,h3{
-      font-weight:700;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:60px 8%;
-      position:relative;
-      background:linear-gradient(
-        135deg,
-        var(--cream),
-        #ffe0d2,
-        #ffd2bf
-      );
-    }
-
-    .hero-content{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:40px;
-      width:100%;
-      max-width:1200px;
-      flex-wrap:wrap;
-    }
-
-    .hero-text{
-      flex:1;
-      min-width:280px;
-    }
-
-    .hero-text h1{
-      font-size:4rem;
-      line-height:1;
-      margin-bottom:20px;
-    }
-
-    .hero-text p{
-      font-size:1.2rem;
-      margin-bottom:14px;
-    }
-
-    .hero-text .phrase{
-      font-size:1.4rem;
-      font-weight:600;
-      color:var(--coral);
-    }
-
-    .hero-image{
-      flex:1;
-      display:flex;
-      justify-content:center;
-      position:relative;
-      min-width:280px;
-    }
-
-    .hero-image img{
-      width:320px;
-      border-radius:30px;
-      box-shadow:var(--shadow);
-    }
-
-    .bubble{
-      position:absolute;
-      top:30px;
-      right:40px;
-      background:var(--white);
-      padding:12px 18px;
-      border-radius:30px;
-      font-weight:600;
-      box-shadow:var(--shadow);
-      animation:float 3s ease-in-out infinite;
-    }
-
-    @keyframes float{
-      0%{transform:translateY(0);}
-      50%{transform:translateY(-10px);}
-      100%{transform:translateY(0);}
-    }
-
-    /* MENU */
-
-    .section-title{
-      text-align:center;
-      font-size:2.5rem;
-      margin-bottom:40px;
-      color:var(--dark);
-    }
-
-    .menu{
-      padding:80px 8%;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .card{
-      background:var(--soft);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow:var(--shadow);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
-    }
-
-    .icon{
-      font-size:3rem;
-      margin-bottom:10px;
-    }
-
-    .divider{
-      margin:18px 0;
-      padding:12px;
-      background:#fff;
-      border-radius:18px;
-    }
-
-    details{
-      margin-top:14px;
-    }
-
-    summary{
-      cursor:pointer;
-      font-weight:600;
-      padding:12px;
-      border-radius:14px;
-      background:var(--peach);
-      color:var(--dark);
-      margin-bottom:10px;
-    }
-
-    ul{
-      padding-left:18px;
-      line-height:2;
-    }
-
-    .food-img{
-      width:100%;
-      border-radius:18px;
-      margin-top:14px;
-    }
-
-    /* BUTTON */
-
-    .story-button{
-      display:inline-block;
-      margin-top:30px;
-      padding:14px 26px;
-      background:var(--dark);
-      color:white;
-      border-radius:40px;
-      transition:0.3s;
-    }
-
-    .story-button:hover{
-      background:var(--coral);
-    }
-
-    /* FOOTER */
-
-    footer{
-      margin-top:80px;
-      background:var(--dark);
-      color:white;
-      padding:60px 8%;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:40px;
-    }
-
-    footer h3{
-      margin-bottom:14px;
-      color:var(--peach);
-    }
-
-    .insta{
-      font-size:1.2rem;
-      margin-top:10px;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:768px){
-
-      .hero-text h1{
-        font-size:3rem;
-      }
-
-      .bubble{
-        right:0;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-
-  <!-- HERO -->
 
   <section class="hero">
 
     <div class="hero-content">
 
       <div class="hero-text">
+
         <h1>Sweet Delight</h1>
 
         <p class="phrase">Feed your soul</p>
         <p class="phrase">Fuel your body</p>
 
-        <br>
-
-        <p>
-          Postres hechos con amor, recuerdos y sabores que
-          te acompañan en cada momento especial.
+        <p class="description">
+          Postres hechos con amor, recuerdos y sabores especiales.
         </p>
 
         <a href="historia.html" class="story-button">
@@ -277,18 +33,18 @@
       </div>
 
       <div class="hero-image">
-        <img src="bruna/chef bruna.jpeg" alt="Chef Bruna">
+
+        <img src="bruna/chef bruna.jpeg" alt="Chef Bruna"/>
 
         <div class="bubble">
           ¡Bienvenido!
         </div>
+
       </div>
 
     </div>
 
   </section>
-
-  <!-- MENU -->
 
   <section class="menu">
 
@@ -328,25 +84,26 @@
 
           <ul>
             <li>Cinnabon</li>
-            <li>Manjar blanco (Cambita) - Solo febrero</li>
-            <li>Carrot cake (Easter special) - Agosto</li>
-            <li>Ginger bread - 24 y 25 Diciembre</li>
+            <li>Manjar blanco (Cambita)</li>
+            <li>Carrot cake (Easter special)</li>
+            <li>Ginger bread</li>
 
             <li>
               Oreo
               <img class="food-img" src="bruna/oreo cookies.jpeg">
             </li>
 
-            <li>Dulce de leche (Cambita)</li>
+            <li>Dulce de leche</li>
             <li>Cookie monster</li>
             <li>Brookies</li>
-            <li>Brigadeiro (Brasilerita)</li>
+            <li>Brigadeiro</li>
             <li>Toffee</li>
             <li>Pistachio</li>
             <li>Dubai Chocolate</li>
             <li>Pavlova</li>
             <li>Birthday cake</li>
             <li>Strawberry short cake</li>
+
           </ul>
 
         </details>
@@ -446,28 +203,33 @@
 
         <div class="icon">📦</div>
 
-        <h2>PACKS / COMBOS</h2>
+        <h2>Packs / Combos</h2>
 
         <details>
           <summary>Galletas</summary>
+
           <ul>
             <li>Pack clásico</li>
-            <li>Pack seasonal</li>
           </ul>
+
         </details>
 
         <details>
           <summary>Brownies</summary>
+
           <ul>
-            <li>Pack brownie lovers</li>
+            <li>Brownie lovers</li>
           </ul>
+
         </details>
 
         <details>
           <summary>Pies</summary>
+
           <ul>
             <li>Mini pie box</li>
           </ul>
+
         </details>
 
       </div>
@@ -475,8 +237,6 @@
     </div>
 
   </section>
-
-  <!-- FOOTER -->
 
   <footer>
 
@@ -486,17 +246,14 @@
         <h3>Nuestra historia</h3>
 
         <p>
-          Conoce cómo comenzó Sweet Delight y el sueño
-          detrás de cada postre.
+          Descubre el sueño detrás de Sweet Delight.
         </p>
       </div>
 
       <div>
         <h3>Insta</h3>
 
-        <p class="insta">
-          sweetdelight.scz
-        </p>
+        <p>sweetdelight.scz</p>
       </div>
 
       <div>
@@ -510,6 +267,8 @@
     </div>
 
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
